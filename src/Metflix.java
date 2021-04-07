@@ -147,15 +147,15 @@ public class Metflix {
      
         //Creo el episodio
         Episodio episodio = new Episodio();
-        episodio.nombre = "Crossfire";
-        episodio.numero = 9;
+        episodio.setNombre("Crossfire");
+        episodio.setNumero(9);
 
         //vinculo temporada con episodio
         temporada.episodios.add(episodio);
 
         episodio = new Episodio();
-        episodio.nombre = "Representative Brody";
-        episodio.numero = 10;
+        episodio.setNombre("Representative Brody");
+        episodio.setNumero(10);
 
         temporada.episodios.add(episodio);
 
@@ -168,14 +168,14 @@ public class Metflix {
         temporada.numero = 4;
 
         episodio = new Episodio();
-        episodio.nombre = "The Drone Queen";
-        episodio.numero = 1;
+        episodio.setNombre("The Drone Queen");
+        episodio.setNumero(1);
 
         temporada.episodios.add(episodio);
 
         episodio = new Episodio();
-        episodio.nombre = "Iron in the Fire";
-        episodio.numero = 4;
+        episodio.setNombre("Iron in the Fire");
+        episodio.setNumero(4);
 
         temporada.episodios.add(episodio);
 
@@ -206,14 +206,14 @@ public class Metflix {
      
         //Episodios:
         episodio = new Episodio();
-        episodio.nombre = "Home";
-        episodio.numero = 3;
+        episodio.setNombre("Home");
+        episodio.setNumero(3);
 
         temporada.episodios.add(episodio);
 
         episodio = new Episodio();
-        episodio.nombre = "Lifeguard";
-        episodio.numero = 10;
+        episodio.setNombre("Lifeguard");
+        episodio.setNumero(10);
 
         temporada.episodios.add(episodio);
 
@@ -226,14 +226,14 @@ public class Metflix {
         temporada.numero = 3;
 
         episodio = new Episodio();
-        episodio.nombre = "What went wrong";
-        episodio.numero = 11;
+        episodio.setNombre("What went wrong");
+        episodio.setNumero(11);
 
         temporada.episodios.add(episodio);
 
         episodio = new Episodio();
-        episodio.nombre = "The dream team";
-        episodio.numero = 22;
+        episodio.setNombre("The dream team");
+        episodio.setNumero(22);
 
         temporada.episodios.add(episodio);
 
@@ -264,15 +264,15 @@ public class Metflix {
      
         //Creo el episodio
         episodio = new Episodio();
-        episodio.nombre = "The last cigarrette";
-        episodio.numero = 11;
+        episodio.setNombre("The last cigarrette");
+        episodio.setNumero(11);
 
         //vinculo temporada con episodio
         temporada.episodios.add(episodio);
 
         episodio = new Episodio();
-        episodio.nombre = "Definitions";
-        episodio.numero = 1;
+        episodio.setNombre ("Definitions");
+        episodio.setNumero(1);
 
         temporada.episodios.add(episodio);
 
@@ -287,15 +287,15 @@ public class Metflix {
      
         //Creo el episodio
         episodio = new Episodio();
-        episodio.nombre = "Wait for it";
-        episodio.numero = 1;
+        episodio.setNombre("Wait for it");
+        episodio.setNumero(1);
 
         //vinculo temporada con episodio
         temporada.episodios.add(episodio);
 
         episodio = new Episodio();
-        episodio.nombre = "Little Boys";
-        episodio.numero = 4;
+        episodio.setNombre("Little Boys");
+        episodio.setNumero(4);
 
         temporada.episodios.add(episodio);
 
@@ -321,14 +321,14 @@ public class Metflix {
      
         //Creo el episodio
         episodio = new Episodio();
-        episodio.nombre = "Pilot";
-        episodio.numero = 1;
+        episodio.setNombre("Pilot");
+        episodio.setNumero(1);
 
         //vinculo temporada con episodio
         temporada.episodios.add(episodio);
 
         episodio = new Episodio();
-        episodio.nombre = "The Cooper-Hofstadter Polarizatio";
+        episodio.setNombre("The Cooper-Hofstadter Polarizatio");
 
         temporada.episodios.add(episodio);
 
