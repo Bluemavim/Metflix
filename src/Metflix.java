@@ -11,116 +11,101 @@ public class Metflix {
 
         //Pelis: Titanic, Batman: El caballero de la noche 
         Pelicula titanic; //declara una variable que apuntara a una Pelicula
-        titanic = new Pelicula(); //Estas ultimoas 2 lineas: Pelicula titanic = new Pelicula();
+        titanic = new Pelicula("Titanic", 1997); //Estas ultimoas 2 lineas: Pelicula titanic = new Pelicula();
 
-        titanic.nombre = "Titanic";
-        titanic.añoLanzamiento = 1997;
-        titanic.duracion = 210; //3hs 30
+        titanic.setDuracion(210); //3hs 30
 
         Actor actor = new Actor();
-        actor.nombre = "Leo DiCaprio";
+        actor.setNombre("Leo DiCaprio");
 
         //Agrego a la lista de actores del objeto titanic
-        titanic.actores.add(actor); //metodo Add -> agregar a una lista
+        titanic.getActores().add(actor); //metodo Add -> agregar a una lista
 
         //Recien ahora estoy agregando a Titanic al catalogo
         this.peliculas.add(titanic);
 
         //Otra Peli
-        Pelicula batman = new Pelicula();
-        batman.nombre = "Batman: el caballero de la noche";
-        batman.añoLanzamiento = 2008;
-        batman.duracion = 152;
+        Pelicula batman = new Pelicula("Batman: el caballero de la noche", 2008);
+        batman.setDuracion(152);
 
         //No voy a declarar otra variable actor, voy a reusar
         //siempre primero antes de reusar
         // re instanciar
         actor = new Actor(); //Creo un nuevo actor, pero referenciado con la variable actor
-        actor.nombre = "Christian Bale";
+        actor.setNombre("Christian Bale");
 
-        batman.actores.add(actor);
+        batman.getActores().add(actor);
 
         this.peliculas.add(batman);
 
         //Peli Eterno resplandor de una mente sin recuerdos:
-        Pelicula eternoResp = new Pelicula();
-        eternoResp.nombre = "Eterno resplandor de una mente sin recuerdos";
-        eternoResp.añoLanzamiento = 2004;
-        eternoResp.duracion = 108;
-        eternoResp.director = new Director();
-        eternoResp.director.nombre = "Michel Gondry";
+        Pelicula eternoResp = new Pelicula("Eterno resplandor de una mente sin recuerdos", 2004);
+        eternoResp.setDuracion(108);
+        eternoResp.setDirector("Michel Gondry");
 
         //Agrego a sus protagonistas
       
         actor = new Actor();
         actor.nombre = "Jim Carrey";
-        eternoResp.actores.add(actor);
+        eternoResp.getActores().add(actor);
 
         actor = new Actor();
         actor.nombre = "Kate Winslet";
-        eternoResp.actores.add(actor);
+        eternoResp.getActores().add(actor);
 
         this.peliculas.add(eternoResp);
 
 
         //Peli Memento:
 
-        Pelicula memento = new Pelicula();
-        memento.nombre = "Memento";
-        memento.añoLanzamiento = 2000;
-        memento.duracion = 113;
+        Pelicula memento = new Pelicula("Memento", 2000); 
+        memento.setDuracion(113);
         memento.director = new Director();
         memento.director.nombre = "Christopher Nolan";
 
         actor = new Actor();
         actor.nombre = "Guy Pearce";
-        memento.actores.add(actor);
+        memento.getActores().add(actor);
 
         this.peliculas.add(memento);
 
         //Peli 1917:
 
-        Pelicula milNueveDiecisiete = new Pelicula();
-        milNueveDiecisiete.nombre = "1917";
-        milNueveDiecisiete.añoLanzamiento = 2019;
-        milNueveDiecisiete.duracion = 119;
+        Pelicula milNueveDiecisiete = new Pelicula("1917", 2019);
+        milNueveDiecisiete.setDuracion(119);
         milNueveDiecisiete.director = new Director();
         milNueveDiecisiete.director.nombre = "Sam Mendes";
 
         actor = new Actor();
         actor.nombre = "George MacKay";
-        milNueveDiecisiete.actores.add(actor);
+        milNueveDiecisiete.getActores().add(actor);
 
         this.peliculas.add(milNueveDiecisiete);
 
 
         //Peli Whiplash:
 
-        Pelicula whiplash = new Pelicula();
-        whiplash.nombre = "Whiplash";
-        whiplash.añoLanzamiento = 2014;
-        whiplash.duracion = 106;
+        Pelicula whiplash = new Pelicula("Whiplash", 2014);
+        whiplash.setDuracion(106);
         whiplash.director = new Director();
         whiplash.director.nombre = "Damien Chazelle";
 
         actor = new Actor();
         actor.nombre = "Miles Teller";
-        whiplash.actores.add(actor);
+        whiplash.getActores().add(actor);
 
         this.peliculas.add(whiplash);
 
         //Peli Interstellar:
 
-        Pelicula interstellar = new Pelicula();
-        interstellar.nombre = "Interstellar";
-        interstellar.añoLanzamiento = 2014;
-        interstellar.duracion = 169;
+        Pelicula interstellar = new Pelicula("Interstellar", 2014);
+        interstellar.setDuracion(169);
         interstellar.director = new Director();
         interstellar.director.nombre = "Christopher Nolan";
 
         actor = new Actor();
         actor.nombre = "Matthew McConaughey";
-        interstellar.actores.add(actor);
+        interstellar.getActores().add(actor);
 
         this.peliculas.add(interstellar);
 
@@ -133,12 +118,12 @@ public class Metflix {
         actor = new Actor();
         actor.nombre = "Claire Danes";
 
-        homeland.actores.add(actor);
+        homeland.getActores().add(actor);
 
         actor = new Actor();
         actor.nombre = "Mandy Patinkin";
 
-        homeland.actores.add(actor);
+        homeland.getActores().add(actor);
 
         //Temporada 1
         //creo la temporada
@@ -146,16 +131,14 @@ public class Metflix {
         temporada.numero = 1;
      
         //Creo el episodio
-        Episodio episodio = new Episodio();
-        episodio.setNombre("Crossfire");
-        episodio.setNumero(9);
+        Episodio episodio = new Episodio(9, "Crossfire");
+        //episodio.setNombre("Crossfire");
+        //episodio.setNumero(9);
 
         //vinculo temporada con episodio
         temporada.episodios.add(episodio);
 
-        episodio = new Episodio();
-        episodio.setNombre("Representative Brody");
-        episodio.setNumero(10);
+        episodio = new Episodio(10, "Representative Brody");
 
         temporada.episodios.add(episodio);
 
@@ -167,15 +150,11 @@ public class Metflix {
         temporada = new Temporada();
         temporada.numero = 4;
 
-        episodio = new Episodio();
-        episodio.setNombre("The Drone Queen");
-        episodio.setNumero(1);
+        episodio = new Episodio(1, "The Drone Queen");
 
         temporada.episodios.add(episodio);
 
-        episodio = new Episodio();
-        episodio.setNombre("Iron in the Fire");
-        episodio.setNumero(4);
+        episodio = new Episodio(4, "Iron in the Fire");
 
         temporada.episodios.add(episodio);
 
@@ -193,27 +172,23 @@ public class Metflix {
         actor = new Actor();
         actor.nombre = "Julianna Margulies";
 
-        goodWife.actores.add(actor);
+        goodWife.getActores().add(actor);
 
         actor = new Actor();
         actor.nombre = "Christine Baransky";
 
-        homeland.actores.add(actor);
+        homeland.getActores().add(actor);
 
         //Temporada 1        
         temporada = new Temporada();
         temporada.numero = 1;
      
         //Episodios:
-        episodio = new Episodio();
-        episodio.setNombre("Home");
-        episodio.setNumero(3);
+        episodio = new Episodio(3, "Home");
 
         temporada.episodios.add(episodio);
 
-        episodio = new Episodio();
-        episodio.setNombre("Lifeguard");
-        episodio.setNumero(10);
+        episodio = new Episodio(10, "Lifeguard");
 
         temporada.episodios.add(episodio);
 
@@ -225,15 +200,11 @@ public class Metflix {
         temporada = new Temporada();
         temporada.numero = 3;
 
-        episodio = new Episodio();
-        episodio.setNombre("What went wrong");
-        episodio.setNumero(11);
+        episodio = new Episodio(11, "What went wrong");
 
         temporada.episodios.add(episodio);
 
-        episodio = new Episodio();
-        episodio.setNombre("The dream team");
-        episodio.setNumero(22);
+        episodio = new Episodio(22, "The dream team");
 
         temporada.episodios.add(episodio);
 
@@ -250,12 +221,12 @@ public class Metflix {
         actor = new Actor();
         actor.nombre = "Neil Patrick Harris";
 
-        howIMetYM.actores.add(actor);
+        howIMetYM.getActores().add(actor);
 
         actor = new Actor();
         actor.nombre = "Cobie Smulders";
 
-        howIMetYM.actores.add(actor);
+        howIMetYM.getActores().add(actor);
         
         //T5:E11
         //creo la temporada
@@ -263,16 +234,14 @@ public class Metflix {
         temporada.numero = 5;
      
         //Creo el episodio
-        episodio = new Episodio();
-        episodio.setNombre("The last cigarrette");
-        episodio.setNumero(11);
+        episodio = new Episodio(11,"The last cigarrete");
+        episodio.setDuracion(22);
 
         //vinculo temporada con episodio
         temporada.episodios.add(episodio);
 
-        episodio = new Episodio();
-        episodio.setNombre ("Definitions");
-        episodio.setNumero(1);
+        episodio = new Episodio(1, "Definitions");
+        episodio.setDuracion(22);
 
         temporada.episodios.add(episodio);
 
@@ -286,16 +255,15 @@ public class Metflix {
         temporada.numero = 3;
      
         //Creo el episodio
-        episodio = new Episodio();
-        episodio.setNombre("Wait for it");
-        episodio.setNumero(1);
+        episodio = new Episodio(1, "Wait for it");
+        episodio.setDuracion(22);
 
         //vinculo temporada con episodio
         temporada.episodios.add(episodio);
 
-        episodio = new Episodio();
-        episodio.setNombre("Little Boys");
-        episodio.setNumero(4);
+        episodio = new Episodio(4, "Little Boys");
+        episodio.setDuracion(22);
+
 
         temporada.episodios.add(episodio);
 
@@ -312,7 +280,7 @@ public class Metflix {
         actor = new Actor();
         actor.nombre = "Kaley Cuoco";
 
-        bbt.actores.add(actor);
+        bbt.getActores().add(actor);
 
         
         //creo la temporada
@@ -320,16 +288,13 @@ public class Metflix {
         temporada.numero = 1;
      
         //Creo el episodio
-        episodio = new Episodio();
-        episodio.setNombre("Pilot");
-        episodio.setNumero(1);
+        episodio = new Episodio(1, "Pilot");
 
         //vinculo temporada con episodio
         temporada.episodios.add(episodio);
 
-        episodio = new Episodio();
-        episodio.setNombre("The Cooper-Hofstadter Polarizatio");
-
+        episodio = new Episodio(9, "The Cooper-Hofstadter Polarization");
+  
         temporada.episodios.add(episodio);
 
         //Agrego la temporada
